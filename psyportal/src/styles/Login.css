@@ -1,0 +1,10 @@
+.loginPage{
+    display: grid;
+    justify-content: center;
+    padding: 10px;
+}
+
+.loginPage h1{
+    display: grid;
+    justify-content: center;
+}
