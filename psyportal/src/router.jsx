@@ -8,8 +8,6 @@ import Links from "./views/Links"
 import Login from "./views/Login"
 import PageNotFound from "./views/PageNotFound"
 import UserProfile from "./views/UserProfile"
-
-import TestPage from "./views/TestPage"
     /* This is the router, through on the NavBar's(DefaultLayout.jsx) in the user will be directed to the page requested */
 
 const router = createBrowserRouter([   

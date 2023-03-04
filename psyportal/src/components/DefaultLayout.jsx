@@ -1,7 +1,7 @@
-import { Fragment, useEffect, useRef, useState } from 'react'
+import { Fragment} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline'
-import { NavLink } from 'react-router-dom'
+import { Bars3Icon, BellIcon, XMarkIcon} from '@heroicons/react/24/outline'
+import { NavLink, Outlet } from 'react-router-dom'
 
 const navigation = [
   { name: 'Home', to: '/'},
@@ -14,8 +14,16 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+{/* This is the NavBar*/}
 export default function Example() {
+
+  const logout = (ev) =>{
+    ev.preventDefault();
+    console.log("Logged Out");
+  }
+
   return (
+    <div>
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
         <>
@@ -47,6 +55,8 @@ export default function Example() {
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
+
+                    {/* This will handle the clicks on the buttons*/}
                     {navigation.map((item) => (
                       <NavLink
                         key={item.name}
@@ -58,6 +68,7 @@ export default function Example() {
                       >
                         {item.name}
                       </NavLink>
+                      
                     ))}
                   </div>
                 </div>
@@ -107,6 +118,7 @@ export default function Example() {
                         {({ active }) => (
                           <a
                             href="#"
+                            onClick={(ev) => logout(ev)}
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
                             Sign out
@@ -122,6 +134,8 @@ export default function Example() {
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
+
+              {/* This will handle the clicks on the buttons on mobile view*/}
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -139,6 +153,11 @@ export default function Example() {
           </Disclosure.Panel>
         </>
       )}
+
+    
+      
     </Disclosure>
+    <Outlet />
+   </div> 
   )
 }
