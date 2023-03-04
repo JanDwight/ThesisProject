@@ -1,4 +1,4 @@
-import {createBrowserRouter, Navigate } from "react-router-dom";
+import {createBrowserRouter, Navigate, Router, Routes } from "react-router-dom";
 import Authenticate from "./components/AuthenticationLayout"
 import Default from "./components/DefaultLayout"
 import About from "./views/AboutUs"
@@ -9,9 +9,12 @@ import Login from "./views/Login"
 import PageNotFound from "./views/PageNotFound"
 import UserProfile from "./views/UserProfile"
 
-const router = createBrowserRouter([
+import TestPage from "./views/TestPage"
+    /* This is the router, through on the NavBar's(DefaultLayout.jsx) in the user will be directed to the page requested */
 
-                                            
+const router = createBrowserRouter([   
+
+    
         {
         path: '/',
         element: <Default/>,
