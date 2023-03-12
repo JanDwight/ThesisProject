@@ -1,13 +1,15 @@
 import { Fragment} from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon} from '@heroicons/react/24/outline'
-import { NavLink, Outlet } from 'react-router-dom'
+import { Bars3Icon, BellIcon, UserIcon, XMarkIcon} from '@heroicons/react/24/outline'
+import { Navigate, NavLink, Outlet } from 'react-router-dom'
+import { userStateContext } from '../contect/contextprovider'
 
 const navigation = [
   { name: 'Home', to: '/'},
   { name: 'Links', to: '/links'},
   { name: 'About', to: '/about'},
   { name: 'Contact', to: '/contact'},
+  { name: 'Login', to: '/login'}
 ]
 
 function classNames(...classes) {
@@ -15,8 +17,13 @@ function classNames(...classes) {
 }
 
 {/* This is the NavBar*/}
-export default function Example() {
+export default function DefaultLayout() {
+  const { currentUser, userToken } = userStateContext();
 
+  if(!userToken)
+  {
+    return <Navigate to="login" />
+  }
   const logout = (ev) =>{
     ev.preventDefault();
     console.log("Logged Out");
@@ -87,13 +94,16 @@ export default function Example() {
                   <div>
                     <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
-                      <img
+                      
+                      <UserIcon className= 'h-8 w-8 bg-black/25 text-white rounded-full'/>
+                      {/*<img
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                         alt=""
-                      />
+                        />*/}
                     </Menu.Button>
                   </div>
+                  
                   <Transition
                     as={Fragment}
                     enter="transition ease-out duration-100"
