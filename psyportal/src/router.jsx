@@ -8,7 +8,10 @@ import Links from "./views/Links"
 import Login from "./views/Login"
 import PageNotFound from "./views/PageNotFound"
 import UserProfile from "./views/UserProfile"
-    /* This is the router, through on the NavBar's(DefaultLayout.jsx) in the user will be directed to the page requested */
+import PostContainer from "./components/Home/PostContainer"
+import Inf from "./components/Home/InfiniteScrolling"
+
+/* This is the router, through on the NavBar's(DefaultLayout.jsx) in the user will be directed to the page requested */
 
 const router = createBrowserRouter([   
 
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/home',
-                element: <Navigate to = '/' />
+                element: <Navigate to = '/' />,
             },
 
             {
@@ -34,7 +37,13 @@ const router = createBrowserRouter([
         
             {
                 path: '/',
-                element: <Home />
+                element: <Home />,
+                children:[
+                    {
+                        path: '/',
+                        element: <PostContainer />
+                    }
+                ]
             },
         
             {
@@ -50,6 +59,11 @@ const router = createBrowserRouter([
             {
                 path: '/userprofile',
                 element: <UserProfile />
+            },
+
+            {
+                path: '/inf',
+                element: <Inf />
             },
         ]
     },
