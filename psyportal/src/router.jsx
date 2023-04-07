@@ -8,6 +8,7 @@ import Links from "./views/Links"
 import Login from "./views/Login"
 import PageNotFound from "./views/PageNotFound"
 import UserProfile from "./views/UserProfile"
+import PreRegistration from "./views/PreRegistration"
 import PostContainer from "./components/Home/PostContainer"
 import Inf from "./components/Home/InfiniteScrolling"
 
@@ -22,7 +23,12 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/home',
-                element: <Navigate to = '/' />,
+                element: <Navigate to = '/' />
+            },
+
+            {
+                path: '/preregistration',
+                element: <PreRegistration />
             },
 
             {
