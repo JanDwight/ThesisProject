@@ -3,6 +3,7 @@ import { Navigate, NavLink, Outlet } from 'react-router-dom'
 
 const navigation = [
     { name: 'Home', to: '/'},
+    { name: 'Evalluation', to: '/evalluation'},
     { name: 'Pre-Registration', to: '/preregistration'},
     { name: 'Links', to: '/links'},
     { name: 'About', to: '/about'},
@@ -19,10 +20,10 @@ function DefaultLayout() {
   return (
     <div className='flex flex-row justify-center mx-auto max-w-screen-2xl'>
       
-        <div className='h-screen bg-green-600 hidden sm:block w-52 '>
+        <div className='h-screen bg-green-600 hidden sm:block w-52 relative'>
           
         
-            <div className="flex flex-col items-center mt-5 ">
+            <div className="flex flex-col items-center mt-5 sticky">
                 {/* This will handle the clicks on the buttons*/}
                 {navigation.map((item) => (
                     <NavLink

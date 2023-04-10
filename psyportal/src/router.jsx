@@ -9,6 +9,7 @@ import Login from "./views/Login"
 import PageNotFound from "./views/PageNotFound"
 import UserProfile from "./views/UserProfile"
 import PreRegistration from "./views/PreRegistration"
+import Evalluation from "./views/Evalluation";
 import PostContainer from "./components/Home/PostContainer"
 import Inf from "./components/Home/InfiniteScrolling"
 
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
             {
                 path: '/home',
                 element: <Navigate to = '/' />
+            },
+
+            {
+                path: '/evalluation',
+                element: <Evalluation />
             },
 
             {
