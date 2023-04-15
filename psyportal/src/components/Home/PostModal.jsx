@@ -11,7 +11,7 @@ function PostModal({visible, onClose}) {
                     flex justify-center items-center'>
 
 {/*Body*/}
-        <div className='bg-white w-4/5'>
+        <div className='w-6/12 bg-white w-4/5'>
             <div className='block m-5'>
                 <input 
                 type="text" 

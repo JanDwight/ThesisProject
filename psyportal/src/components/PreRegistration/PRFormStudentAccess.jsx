@@ -1,5 +1,6 @@
 import React from 'react'
 
+/*Study PDFtron for pdf editing */
 function PreRegistrationForm() {
   return (
     <div>

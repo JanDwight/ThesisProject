@@ -1,5 +1,6 @@
 import React from 'react'
 import EVStudentAccess from '../components/Evalluation/EVStudentAccess'
+import AddInsButton from '../components/Evalluation/AddInsButton'
 
 function Evalluation() {
   return (
@@ -11,6 +12,11 @@ function Evalluation() {
         </div>
 
         <EVStudentAccess />
+        
+        <div className='flex justify-center'>
+        <AddInsButton />
+        </div>
+        
     </div>
   )
 }

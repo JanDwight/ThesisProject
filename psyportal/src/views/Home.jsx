@@ -1,5 +1,7 @@
-import {Outlet } from 'react-router-dom'
 import PostButton from '../components/Home/PostButton';
+import PostContainer from '../components/Home/PostContainer'
+
+
 
 export default function Home() {
   const postCounter = ["Spring", "Summer", "Autumn", "Winter"];
@@ -14,7 +16,7 @@ export default function Home() {
       <ul className=''>
       {postCounter.map(() => (
         <div className="flex justify-center origin-center m-5 mx-auto">
-          <Outlet />
+          <PostContainer />
           
           </div>
         ))}

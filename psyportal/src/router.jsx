@@ -9,9 +9,7 @@ import Login from "./views/Login"
 import PageNotFound from "./views/PageNotFound"
 import UserProfile from "./views/UserProfile"
 import PreRegistration from "./views/PreRegistration"
-import Evalluation from "./views/Evalluation";
-import PostContainer from "./components/Home/PostContainer"
-import Inf from "./components/Home/InfiniteScrolling"
+import Evalluation from "./views/Evalluation"
 
 /* This is the router, through on the NavBar's(DefaultLayout.jsx) in the user will be directed to the page requested */
 
@@ -49,13 +47,7 @@ const router = createBrowserRouter([
         
             {
                 path: '/',
-                element: <Home />,
-                children:[
-                    {
-                        path: '/',
-                        element: <PostContainer />
-                    }
-                ]
+                element: <Home />
             },
         
             {
@@ -71,12 +63,7 @@ const router = createBrowserRouter([
             {
                 path: '/userprofile',
                 element: <UserProfile />
-            },
-
-            {
-                path: '/inf',
-                element: <Inf />
-            },
+            }
         ]
     },
 

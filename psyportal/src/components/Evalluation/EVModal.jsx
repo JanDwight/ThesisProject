@@ -10,7 +10,7 @@ function EVModal({visible, onClose}) {
                     flex justify-center items-center'>
 
 {/*Body*/}
-        <div className='bg-white w-4/5'>
+        <div className='w-6/12 bg-white w-4/5'>
             <div className='block m-5'>
                 <input 
                 type="text" 
@@ -31,6 +31,7 @@ function EVModal({visible, onClose}) {
 
 
 {/*Buttons*/}
+            {/* Here is the Cancel Button on the Problem #1 */}
             <div className='flex justify-end items-end m-5'>
             <button onClick={onClose} class="bg-red-600 hover:bg-blue-700 
                             text-white font-bold py-2 px-4 rounded">
@@ -39,7 +40,7 @@ function EVModal({visible, onClose}) {
             {/*Not Working Yet*/}
             <button class="bg-green-600 ml-5 hover:bg-blue-700 
                             text-white font-bold py-2 px-4 rounded">
-                Post
+                Submit
             </button>
             </div>
         </div>
