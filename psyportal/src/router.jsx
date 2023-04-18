@@ -11,61 +11,67 @@ import UserProfile from "./views/UserProfile"
 import PreRegistration from "./views/PreRegistration"
 import Evalluation from "./views/Evalluation"
 
+import TMPLogIn from "./TMPLogIn";
 /* This is the router, through on the NavBar's(DefaultLayout.jsx) in the user will be directed to the page requested */
 
 const router = createBrowserRouter([   
 
     
-        {
-        path: '/',
-        element: <Default/>,
+        {path: '/',
+        element: <TMPLogIn/>,
         children: [
             {
-                path: '/home',
-                element: <Navigate to = '/' />
-            },
-
-            {
-                path: '/evalluation',
-                element: <Evalluation />
-            },
-
-            {
-                path: '/preregistration',
-                element: <PreRegistration />
-            },
-
-            {
-                path: '/accounts',
-                element: <ManageAccounts />
-            },
-        
-            {
-                path: '/contact',
-                element: <Contact />
-            },
-        
-            {
                 path: '/',
-                element: <Home />
-            },
-        
-            {
-                path: '/links',
-                element: <Links />
-            },
-        
-            {
-                path: '/pagenotfound',
-                element: <PageNotFound />
-            },
-        
-            {
-                path: '/userprofile',
-                element: <UserProfile />
+                element: <Default/>,
+                    children: [
+                    {
+                        path: '/home',
+                        element: <Navigate to = '/' />
+                    },
+
+                    {
+                        path: '/evalluation',
+                        element: <Evalluation />
+                    },
+
+                    {
+                        path: '/preregistration',
+                        element: <PreRegistration />
+                    },
+
+                    {
+                        path: '/accounts',
+                        element: <ManageAccounts />
+                    },
+                
+                    {
+                        path: '/contact',
+                        element: <Contact />
+                    },
+                
+                    {
+                        path: '/',
+                        element: <Home />
+                    },
+                
+                    {
+                        path: '/links',
+                        element: <Links />
+                    },
+            
+                    {
+                        path: '/pagenotfound',
+                        element: <PageNotFound />
+                    },
+                
+                    {
+                        path: '/userprofile',
+                        element: <UserProfile />
+                    }
+                ]   
             }
         ]
-    },
+    },    
 
     
 
