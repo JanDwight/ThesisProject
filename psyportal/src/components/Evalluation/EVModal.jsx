@@ -11,22 +11,14 @@ function EVModal({visible, onClose}) {
 
 {/*Body*/}
         <div className='w-6/12 bg-white w-4/5'>
-            <div className='block m-5'>
-                <input 
-                type="text" 
-                className='shadow appearance-none border rounded 
-                            w-full py-2 px-3 text-gray-700 leading-tight 
-                            focus:outline-none focus:shadow-outline'
-                placeholder="Title"
-                />
+            <div className='relative border-4 border-green-600 m-5 h-96'>
+              <div className='flex justify-center items-center bg-green-600 text-lg h-12 w-[400px]'>
+                Aspects Related to Teaching Performance
+              </div>
 
-                <input 
-                type="text" 
-                className='shadow appearance-none border rounded overflow-auto mt-5
-                            w-full h-40 py-2 px-3 text-gray-700 leading-tight 
-                            focus:outline-none focus:shadow-outline'
-                placeholder="Content"            
-                />  
+              <div className='absolute top-0 right-[20%]'>
+                Scale
+              </div>
             </div>
 
 

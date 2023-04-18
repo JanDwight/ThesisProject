@@ -16,7 +16,7 @@ const navigation = [
     return classes.filter(Boolean).join(' ')
   }
 
-function DefaultLayout() {
+function TMPLoggedIn() {
     return (
         <div className='flex flex-row justify-center mx-auto max-w-screen-2xl'>
             <div className='h-screen bg-green-600 hidden sm:block w-52'>
@@ -67,4 +67,4 @@ function DefaultLayout() {
       )
 }
 
-export default DefaultLayout
+export default TMPLoggedIn

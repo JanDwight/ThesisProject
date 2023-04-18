@@ -1,7 +1,7 @@
 import {createBrowserRouter, Navigate, Router, Routes } from "react-router-dom";
 import Authenticate from "./components/AuthenticationLayout"
 import Default from "./components/DefaultLayout"
-import About from "./views/AboutUs"
+import ManageAccounts from "./views/Accounts"
 import Contact from "./views/Contact"
 import Home from "./views/Home"
 import Links from "./views/Links"
@@ -36,8 +36,8 @@ const router = createBrowserRouter([
             },
 
             {
-                path: '/about',
-                element: <About />
+                path: '/accounts',
+                element: <ManageAccounts />
             },
         
             {

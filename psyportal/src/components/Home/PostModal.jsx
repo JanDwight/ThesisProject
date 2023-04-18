@@ -13,6 +13,8 @@ function PostModal({visible, onClose}) {
 {/*Body*/}
         <div className='w-6/12 bg-white w-4/5'>
             <div className='block m-5'>
+
+                <div>
                 <input 
                 type="text" 
                 className='shadow appearance-none border rounded 
@@ -27,7 +29,10 @@ function PostModal({visible, onClose}) {
                             w-full h-40 py-2 px-3 text-gray-700 leading-tight 
                             focus:outline-none focus:shadow-outline'
                 placeholder="Content"            
-                />  
+                />
+                </div>
+
+                  
             </div>
 
 

@@ -10,11 +10,16 @@ function PreRegistration() {
 
             <PreRegistrationForm />
             
-            {/*<div>
-                <h1 className='font-bold ml-15'>
-                    PRE-REGISTRATION FORM
-                </h1>
-            </div>*/}
+            <div className='flex justify-center'>
+                <button className='bg-green-600 m-5 px-5 py-3 rounded'>
+                  Approved
+                </button>
+
+                <button className='bg-green-600 m-5 px-5 py-3 rounded'>
+                  Print
+                </button>
+            </div>
+
         </div>
     </div>
   )
