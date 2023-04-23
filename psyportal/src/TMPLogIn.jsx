@@ -58,6 +58,8 @@ function TMPLogIn() {
   // JSX code for login form
   const renderForm = (
     <div className="form">
+        
+        <div className="title">Sign In</div>
       <form onSubmit={handleSubmit}>
         <div className="input-container">
           <label>Username </label>
@@ -77,12 +79,14 @@ function TMPLogIn() {
   );
 
   return (
-    <div className="app">
+    <div>
+        <div className="app">
       <div className="login-form">
-        <div className="title">Sign In</div>
         {isSubmitted ? <DefaultLayout/> : renderForm}
       </div>
     </div>
+    </div>
+    
   );
 }
 
