@@ -7,7 +7,7 @@ function PostButton() {
     const handleOnClose = () => setShowPostModal(false);
 
   return (
-    <div>
+    <div className='shadow-lg hover:shadow-2xl'>
         <button onClick={() => setShowPostModal(true)} className='bg-green-600 rounded hover:bg-green-500 hover:text-black px-5 py-2'>
             Post
         </button>

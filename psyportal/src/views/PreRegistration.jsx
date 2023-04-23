@@ -11,11 +11,11 @@ function PreRegistration() {
             <PreRegistrationForm />
             
             <div className='flex justify-center'>
-                <button className='bg-green-600 m-5 px-5 py-3 rounded'>
+                <button className='bg-green-600 m-5 px-5 py-3 rounded shadow-xl  hover:shadow-2xl'>
                   Approved
                 </button>
 
-                <button className='bg-green-600 m-5 px-5 py-3 rounded'>
+                <button className='bg-green-600 m-5 px-5 py-3 rounded shadow-xl  hover:shadow-2xl'>
                   Print
                 </button>
             </div>

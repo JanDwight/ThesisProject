@@ -6,10 +6,11 @@ import { userStateContext } from '../contect/contextprovider'
 
 const navigation = [
   { name: 'Home', to: '/'},
-  { name: 'Links', to: '/links'},
-  { name: 'About', to: '/about'},
-  { name: 'Contact', to: '/contact'},
-  { name: 'Login', to: '/login'}
+    { name: 'Evalluation', to: '/evalluation'},
+    { name: 'Pre-Registration', to: '/preregistration'},
+    { name: 'Links', to: '/links'},
+    { name: 'Accounts', to: '/accounts'},
+    { name: 'Contact', to: '/contact'},
 ]
 
 function classNames(...classes) {
@@ -31,7 +32,7 @@ export default function Navbar() {
 
   return (
     <div>
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-green-800">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -61,7 +62,7 @@ export default function Navbar() {
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4" >
 
                     {/* This will handle the clicks on the buttons*/}
                     {navigation.map((item) => (
@@ -69,7 +70,7 @@ export default function Navbar() {
                         key={item.name}
                         to={item.to}
                         className={({isActive}) => classNames(
-                          isActive ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          isActive ? 'bg-green-300 text-black' : 'text-black hover:bg-green-300 hover:text-black',
                           'rounded-md px-3 py-2 text-sm font-medium'
                         )}
                       >
@@ -117,17 +118,17 @@ export default function Navbar() {
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="/userprofile"
+                            href="/"
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Your Profile
+                            User Profile
                           </a>
                         )}
                       </Menu.Item>
                       <Menu.Item>
                         {({ active }) => (
                           <a
-                            href="#"
+                            href="/"
                             onClick={(ev) => logout(ev)}
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >

@@ -11,14 +11,14 @@ function PostModal({visible, onClose}) {
                     flex justify-center items-center'>
 
 {/*Body*/}
-        <div className='w-6/12 bg-white w-4/5'>
+        <div className='w-6/12 bg-white h-[500px]'>
             <div className='block m-5'>
 
                 <div>
                 <input 
                 type="text" 
                 className='shadow appearance-none border rounded 
-                            w-full py-2 px-3 text-gray-700 leading-tight 
+                            w-full py-2 px-3 text-gray-700  
                             focus:outline-none focus:shadow-outline'
                 placeholder="Title"
                 />
@@ -37,7 +37,7 @@ function PostModal({visible, onClose}) {
 
 
 {/*Buttons*/}
-            <div className='flex justify-end items-end m-5'>
+            <div className='flex justify-center m-5'>
             <button onClick={onClose} class="bg-red-600 hover:bg-blue-700 
                             text-white font-bold py-2 px-4 rounded">
                 Cancel

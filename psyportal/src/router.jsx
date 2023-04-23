@@ -17,7 +17,8 @@ import TMPLogIn from "./TMPLogIn";
 const router = createBrowserRouter([   
 
     
-        {path: '/',
+    {
+        path: '/',
         element: <TMPLogIn/>,
         children: [
             {
@@ -67,6 +68,11 @@ const router = createBrowserRouter([
                     {
                         path: '/userprofile',
                         element: <UserProfile />
+                    },
+
+                    {
+                        path: '/login',
+                        element: <TMPLogIn/>
                     }
                 ]   
             }

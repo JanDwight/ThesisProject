@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 
 import "./components/styles.css";
-import DefaultLayout from "./components/DefaultLayout";
+import { Outlet } from "react-router-dom";
 
 function TMPLogIn() {
   // React States
@@ -12,12 +11,12 @@ function TMPLogIn() {
   // User Login info
   const database = [
     {
-      username: "user1",
-      password: "pass1"
+      username: "admin",
+      password: "admin"
     },
     {
-      username: "user2",
-      password: "pass2"
+      username: "student",
+      password: "student"
     }
   ];
 
@@ -82,7 +81,7 @@ function TMPLogIn() {
     <div>
         <div className="app">
       <div className="login-form">
-        {isSubmitted ? <DefaultLayout/> : renderForm}
+        {isSubmitted ? <Outlet/> : renderForm}
       </div>
     </div>
     </div>

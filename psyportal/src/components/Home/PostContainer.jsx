@@ -2,7 +2,7 @@ import React from 'react'
 
 function PostContainer() {
   return (
-    <div className='flex flex-col w-4/5 max-h-[90rem] bg-slate-50 p-0'>
+    <div className='flex flex-col w-4/5 max-h-[90rem] bg-slate-50 px-2 rounded-xl shadow-lg hover:shadow-2xl'>
         <div className='m-2 font-semibold'>
             <h1>Lorem ipsum dolor sit amet. Non quasi quidem quo aliquam corrupti qui</h1>
         </div>
