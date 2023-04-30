@@ -7,7 +7,7 @@ function EVStudentAccess() {
     
 
   return (
-    <div className='mt-3 mx-5 '>
+    <div className='mt-3 mx-[100px] w-[100rem]'>
           <ul className=''>
             {postCounter.map(() => (
                <EVButton />

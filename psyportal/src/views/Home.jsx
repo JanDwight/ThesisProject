@@ -1,5 +1,5 @@
-import PostButton from '../components/Home/PostButton';
 import PostContainer from '../components/Home/PostContainer'
+import SearchButton from '../components/Home/SearchButton';
 
 
 
@@ -9,7 +9,7 @@ export default function Home() {
   return (
   <>
     <div className='flex justify-center items-center mt-5 '>
-      <PostButton />
+      <SearchButton />
     </div>
 
     <div className="flex justify-center origin-center  mx-auto">

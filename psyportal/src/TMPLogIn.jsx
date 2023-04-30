@@ -3,10 +3,16 @@ import React, { useState } from "react";
 import "./components/styles.css";
 import { Outlet } from "react-router-dom";
 
+
+
+var uData = ''
+
+
 function TMPLogIn() {
   // React States
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  
 
   // User Login info
   const database = [
@@ -30,9 +36,11 @@ function TMPLogIn() {
     event.preventDefault();
 
     var { uname, pass } = document.forms[0];
-
+    uData = pass.value
+    
     // Find user login info
     const userData = database.find((user) => user.username === uname.value);
+    
 
     // Compare user info
     if (userData) {
@@ -45,6 +53,7 @@ function TMPLogIn() {
     } else {
       // Username not found
       setErrorMessages({ name: "uname", message: errors.uname });
+      uData = userData
     }
   };
 
@@ -56,6 +65,7 @@ function TMPLogIn() {
 
   // JSX code for login form
   const renderForm = (
+    <div className="m-auto w-96 shadow-2xl p-5 flex justify-center">
     <div className="form">
         
         <div className="title">Sign In</div>
@@ -70,18 +80,19 @@ function TMPLogIn() {
           <input type="password" name="pass" required />
           {renderErrorMessage("pass")}
         </div>
-        <div className="button-container">
-          <input type="submit" />
+        <div className="button-container ">
+          <input type="submit" className="rounded"/>
         </div>
       </form>
+    </div>
     </div>
   );
 
   return (
-    <div>
+    <div className="">
         <div className="app">
       <div className="login-form">
-        {isSubmitted ? <Outlet/> : renderForm}
+        {isSubmitted ? <Outlet /> : renderForm}
       </div>
     </div>
     </div>

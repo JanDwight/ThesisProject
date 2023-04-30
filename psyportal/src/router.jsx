@@ -22,6 +22,7 @@ const router = createBrowserRouter([
         element: <TMPLogIn/>,
         children: [
             {
+                
                 path: '/',
                 element: <Default/>,
                     children: [

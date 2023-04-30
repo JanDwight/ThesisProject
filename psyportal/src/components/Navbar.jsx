@@ -3,6 +3,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, BellIcon, UserIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import { Navigate, NavLink, Outlet } from 'react-router-dom'
 import { userStateContext } from '../contect/contextprovider'
+import psyLogo from '../assets/PsyLogo.png'
 
 const navigation = [
   { name: 'Home', to: '/'},
@@ -51,14 +52,14 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <img
-                    className="block h-8 w-auto lg:hidden"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    className="block h-10 w-auto lg:hidden rounded-full"
+                    src={psyLogo}
+                    alt=""
                   />
                   <img
-                    className="hidden h-8 w-auto lg:block"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
+                    className="hidden h-10 w-auto lg:block rounded-full"
+                    src={psyLogo}
+                    alt=""
                   />
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
@@ -115,16 +116,7 @@ export default function Navbar() {
                     leaveTo="transform opacity-0 scale-95"
                   >
                     <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="/"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            User Profile
-                          </a>
-                        )}
-                      </Menu.Item>
+                      
                       <Menu.Item>
                         {({ active }) => (
                           <a
@@ -132,7 +124,17 @@ export default function Navbar() {
                             onClick={(ev) => logout(ev)}
                             className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                           >
-                            Sign out
+                            
+                          </a>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <a
+                            href="/"
+                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
+                          >
+                            Sign Out
                           </a>
                         )}
                       </Menu.Item>
@@ -143,7 +145,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 px-2 pt-2 pb-3">
 
               {/* This will handle the clicks on the buttons on mobile view*/}

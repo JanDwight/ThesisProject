@@ -4,11 +4,8 @@ import Navbar from './Navbar'
 
 
 function DefaultLayout() {
-    return (
-        <div>
-            <Admin/>
-        </div>
-      )
+    return <Navbar/>
+    
 }
 
 export default DefaultLayout
