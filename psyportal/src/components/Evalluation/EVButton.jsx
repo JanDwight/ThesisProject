@@ -7,12 +7,16 @@ function EVButton() {
     const handleOnClose = () => setShowEVModal(false);
 
   return (
-    <div className="bg-green-600 rounded h-10 mt-3 shadow-xl hover:bg-green-300 hover:shadow-2xl">
-        <button onClick={() => setShowEVModal(true)} className='flex  items-center h-full w-full'>
-            <div className='grid grid-cols-3 lg:gap-x-[30rem] md:gap-x-40 sm:gap-x-15'>
+    <div className="bg-green-600 rounded h-10 mt-3 shadow-xl hover:bg-green-300 hover:shadow-2xl mx-5 ">
+        <button onClick={() => setShowEVModal(true)} className='h-full w-full'>
+            <div className='flex justify-center md:gap-x-52'>
                 <div>Code</div>
-                <div>Description</div>
-                <div>Sir X</div>
+
+                <div className='hidden md:flex md:justify-center md:gap-x-52'>
+                 <div>Description</div>
+                <div>Sir X</div> 
+                </div>
+                
             </div>
         </button>
 

@@ -6,12 +6,11 @@ import { userStateContext } from '../contect/contextprovider'
 import psyLogo from '../assets/PsyLogo.png'
 
 const navigation = [
-  { name: 'Home', to: '/'},
-    { name: 'Evalluation', to: '/evalluation'},
+    { name: 'Home', to: '/'},
+    { name: 'Evaluation', to: '/evalluation'},
     { name: 'Pre-Registration', to: '/preregistration'},
     { name: 'Links', to: '/links'},
     { name: 'Accounts', to: '/accounts'},
-    { name: 'Contact', to: '/contact'},
 ]
 
 function classNames(...classes) {

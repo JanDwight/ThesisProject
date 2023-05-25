@@ -4,7 +4,7 @@ import SearchButton from '../components/Home/SearchButton';
 
 
 export default function Home() {
-  const postCounter = ["Spring", "Summer", "Autumn", "Winter"];
+  const postCounter = ["1", "2", "3", "4"];
 
   return (
   <>
@@ -12,8 +12,8 @@ export default function Home() {
       <SearchButton />
     </div>
 
-    <div className="flex justify-center origin-center  mx-auto">
-      <ul className=''>
+    <div className="flex justify-center origin-center mx-auto">
+      <ul>
       {postCounter.map(() => (
         <div className="flex justify-center origin-center m-5 mx-auto">
           <PostContainer />

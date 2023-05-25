@@ -9,9 +9,9 @@ function Admin() {
             <div></div>
             <div className='max-h-0 overflow-hidden peer-checked:max-h-full flex flex-col'>
               <div className='bg-black w-full h-1 mb-5 mt-1'></div>
+              <button className='py-2 m-2 bg-green-600 rounded'>Admin 1</button>
               <button className='py-2 m-2 bg-green-600 rounded'>Admin 2</button>
               <button className='py-2 m-2 bg-green-600 rounded'>Admin 3</button>
-              <button className='py-2 m-2 bg-green-600 rounded'>Admin 1</button>
             </div>
           </div>
         </div>

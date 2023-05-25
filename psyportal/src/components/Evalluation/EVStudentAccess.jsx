@@ -3,16 +3,15 @@ import React from 'react'
 
 function EVStudentAccess() {
     
-    const postCounter = ["Spring", "Summer", "Autumn", "Winter"];
-    
 
   return (
-    <div className='mt-3 mx-[100px] w-[100rem]'>
-          <ul className=''>
-            {postCounter.map(() => (
-               <EVButton />
-            ))}
-          </ul>
+    <div className='flex flex-col'>
+          <EVButton/>
+
+          <div className="flex flex-col">
+            <EVButton/>
+            <EVButton/>
+          </div>
     </div>
   )
 }
